@@ -28,10 +28,11 @@ $( document ).ready(function() {
               url: "/shoes",
               data: { "shoe": { "material": type } },
               success: function(data) {
-                var show_link = "<a href='/shoes/" + data.id + "'>Show</a>"
-                var edit_link = "<a href='/shoes/" + data.id + "'>Edit</a>"
-                var delete_link = "<a href='/shoes/" + data.id + "' data-method='delete'>Delete</a>"
+                var show_link = "<a href='/shoes/" + data.id + "'>Show</a>";
+                var edit_link = "<a href='/shoes/" + data.id + "'>Edit</a>";
+                var delete_link = "<a href='/shoes/" + data.id + "' data-method='delete'>Delete</a>";
                 $("tbody").append("<tr><td>" + data.material + "</td><td>" + show_link + "</td><td>" + edit_link + "</td><td>" + delete_link + "</td></tr>");
+                $("input").val(" ");
               }
             })
   });
